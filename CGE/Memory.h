@@ -14,7 +14,7 @@ namespace CGE
     size_t removeReference(void* inMemory);
 }
 
-void* operator new(size_t inSize);
-void operator delete(void* inData);
+extern void* operator new(size_t inSize);
+extern void operator delete(void* inData);
 
 #endif

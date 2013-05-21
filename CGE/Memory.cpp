@@ -134,12 +134,12 @@ namespace CGE
     }
 }
 
-void* operator new(size_t inSize)
+void* operator new(size_t inSize) throw(std::bad_alloc)
 {
     return CGE::allocate(inSize, CGE::GeneralHeap);
 }
 
-void operator delete(void* inData)
+void operator delete(void* inData) throw()
 {
     CGE::release(inData);
 }
