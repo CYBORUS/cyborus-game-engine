@@ -14,7 +14,7 @@ namespace CGE
     size_t removeReference(void* inMemory);
 }
 
-extern void* operator new(size_t inSize);
-extern void operator delete(void* inData);
+extern void* operator new(size_t inSize) throw(std::bad_alloc);
+extern void operator delete(void* inData) throw();
 
 #endif
